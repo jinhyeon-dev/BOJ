@@ -1,8 +1,8 @@
-par = input().split('-')
+pm = input().split('-')
 
 num = []
 
-for i in par:
+for i in pm:
     sum = 0
     tmp = i.split('+') 
     for j in tmp: 

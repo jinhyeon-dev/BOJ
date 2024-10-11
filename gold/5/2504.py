@@ -12,12 +12,12 @@ for i in range(len(arr)):
         tmp *=3
     elif arr[i] == ")":
         if not stack or stack[-1] == "[":
-            answer = 0 # 실패
+            answer = 0
             break
         if arr[i-1] == "(":
             answer += tmp
         stack.pop()
-        tmp //= 2  #tmp 초기화
+        tmp //= 2 
     else:
         if not stack or stack[-1] == "(":
             answer=0
@@ -25,7 +25,7 @@ for i in range(len(arr)):
         if arr[i-1] =='[':
             answer+=tmp
         stack.pop()
-        tmp //=3 #tmp 초기화
+        tmp //=3
 
 if stack:
     print(0)

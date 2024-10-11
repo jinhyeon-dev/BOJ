@@ -1,16 +1,16 @@
 import sys
-k, n = map(int, input().split())
-lan = [int(sys.stdin.readline()) for _ in range(k)]
+K, N = map(int, input().split())
+lan = [int(sys.stdin.readline()) for _ in range(K)]
+start, end = 1, max(lan) 
 
-start, end = 1, max(lan)
-
-while start <= end:
+while start <= end: 
     mid = (start + end) // 2
     lines = 0
     for i in lan:
-        lines += i
-    if lines >= n:
+        lines += i // mid 
+        
+    if lines >= N:
         start = mid + 1
     else:
-        end = min - 1
-print(end )
+        end = mid - 1
+print(end)
